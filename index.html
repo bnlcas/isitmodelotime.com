@@ -1,0 +1,39 @@
+<body>
+
+<div id = "yes" style = "position: absolute; position: absolute;
+  top: 20%;
+  left: 18%;
+  transform: translate(-50%, -50%); font-size: 48;">Yes, it is!</div>
+<img src = "modelo_esp_can_grande.jpg" position = "absolute" height = "100%" alt="Modelo Time">
+
+<div id = "modelo" style = "position: absolute; position: absolute;
+  top: 40%;
+  left: 18%;
+  transform: translate(-50%, -50%); font-size: 60;">Modelo</div>
+
+
+<div id = "time" style = "position: absolute; position: absolute;
+  top: 60%;
+  left: 18%;
+  transform: translate(-50%, -50%); font-size: 60;">Time!</div>
+
+<script>
+  var frame = 0;
+  var modeloText = document.getElementById("yes");
+  var timeText = document.getElementById("time");
+  var modelo = document.getElementById("modelo");
+  setInterval(ChangeTextColor, 10);
+
+  function ChangeTextColor()
+  {
+    frame += 1;
+    var hue = frame % 360;
+    var why = (frame + 15) % 360;
+    var fuck = (frame + 30) % 360;
+
+    modeloText.style.color = "hsl(" + why + ", 100%, 50%)";
+    timeText.style.color = "hsl(" + fuck + ", 100%, 50%)";
+    modelo.style.color = "hsl(" + hue + ", 100%, 50%)";
+  }
+</script>
+</body>
